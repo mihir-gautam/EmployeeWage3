@@ -1,0 +1,13 @@
+C:\Users\Mihir Gautam\source\repos\EmployeeWageProblem\EmployeeWageProblem\bin\Debug\netcoreapp3.1\EmployeeWageProblem.exe
+C:\Users\Mihir Gautam\source\repos\EmployeeWageProblem\EmployeeWageProblem\bin\Debug\netcoreapp3.1\EmployeeWageProblem.deps.json
+C:\Users\Mihir Gautam\source\repos\EmployeeWageProblem\EmployeeWageProblem\bin\Debug\netcoreapp3.1\EmployeeWageProblem.runtimeconfig.json
+C:\Users\Mihir Gautam\source\repos\EmployeeWageProblem\EmployeeWageProblem\bin\Debug\netcoreapp3.1\EmployeeWageProblem.runtimeconfig.dev.json
+C:\Users\Mihir Gautam\source\repos\EmployeeWageProblem\EmployeeWageProblem\bin\Debug\netcoreapp3.1\EmployeeWageProblem.dll
+C:\Users\Mihir Gautam\source\repos\EmployeeWageProblem\EmployeeWageProblem\bin\Debug\netcoreapp3.1\EmployeeWageProblem.pdb
+C:\Users\Mihir Gautam\source\repos\EmployeeWageProblem\EmployeeWageProblem\obj\Debug\netcoreapp3.1\EmployeeWageProblem.AssemblyInfoInputs.cache
+C:\Users\Mihir Gautam\source\repos\EmployeeWageProblem\EmployeeWageProblem\obj\Debug\netcoreapp3.1\EmployeeWageProblem.AssemblyInfo.cs
+C:\Users\Mihir Gautam\source\repos\EmployeeWageProblem\EmployeeWageProblem\obj\Debug\netcoreapp3.1\EmployeeWageProblem.csproj.CoreCompileInputs.cache
+C:\Users\Mihir Gautam\source\repos\EmployeeWageProblem\EmployeeWageProblem\obj\Debug\netcoreapp3.1\EmployeeWageProblem.dll
+C:\Users\Mihir Gautam\source\repos\EmployeeWageProblem\EmployeeWageProblem\obj\Debug\netcoreapp3.1\EmployeeWageProblem.pdb
+C:\Users\Mihir Gautam\source\repos\EmployeeWageProblem\EmployeeWageProblem\obj\Debug\netcoreapp3.1\EmployeeWageProblem.genruntimeconfig.cache
+C:\Users\Mihir Gautam\source\repos\EmployeeWageProblem\EmployeeWageProblem\obj\Debug\netcoreapp3.1\EmployeeWageProblem.csprojAssemblyReference.cache
