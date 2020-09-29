@@ -16,11 +16,22 @@ namespace EmployeeWageProblem
             int totalEmpHrs = 0;
             int totalWorkingDays = 0;
 
+            Random random = new Random();
+            int empCheck = random.Next(0, 2);
+            if (empCheck == IS_FULL_TIME)
+            {
+                Console.WriteLine("Employee is Present");
+            }
+            else
+            {
+                Console.WriteLine("Employee is Absent");
+            }
+
             while (totalEmpHrs <= MAX_HRS_IN_MONTH && totalWorkingDays < NUM_OF_WORKING_DAYS)
             {
                 totalWorkingDays++;
-                Random random = new Random();
-                int empCheck = random.Next(0, 3);
+                Random random2 = new Random();
+                int checkShift = random2.Next(0, 3);
                 switch (empCheck)
                 {
                     case IS_PART_TIME:
