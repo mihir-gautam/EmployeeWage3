@@ -15,12 +15,11 @@ namespace EmployeeWageProblem
             int empHrs = 0;
             int totalEmpHrs = 0;
             int totalWorkingDays = 0;
-
             while (totalEmpHrs <= MAX_HRS_IN_MONTH && totalWorkingDays < NUM_OF_WORKING_DAYS)
             {
                 totalWorkingDays++;
-                Random random2 = new Random();
-                int checkShift = random2.Next(0, 3);
+                Random random = new Random();
+                int checkShift = random.Next(0, 3);
                 switch (checkShift)
                 {
                     case IS_PART_TIME:
