@@ -6,8 +6,8 @@ namespace EmployeeWageProblem
     {
         static void Main(String[] args)
         {
-        ForMultipleCompanies.computeEmpWage("Microsoft", 20, 2, 10);
-        ForMultipleCompanies.computeEmpWage("Apple", 10, 4, 20);
+        ForMultipleCompanies.ComputeEmpWage("Microsoft", 20, 2, 10);
+        ForMultipleCompanies.ComputeEmpWage("Apple", 10, 4, 20);
         }
     }
 }

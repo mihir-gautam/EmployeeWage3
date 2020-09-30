@@ -5,7 +5,7 @@ using System.Text;
 
 namespace EmployeeWageProblem
 {
-    public partial class ForMultipleCompanies
+    class ForMultipleCompanies
     {
         public const int IS_PART_TIME = 1;
         public const int IS_FULL_TIME = 2;
@@ -13,7 +13,7 @@ namespace EmployeeWageProblem
         public const int NUM_OF_WORKING_DAYS = 20;
         public const int MAX_HRS_IN_MONTH = 100;
 
-        public static int computeEmpWage(string company, int empRatePerHour, int noOfWorkingDays, int maxHoursPerMonth)
+        public static int ComputeEmpWage(string company, int empRatePerHour, int noOfWorkingDays, int maxHoursPerMonth)
         {
             int empHrs = 0;
             int totalEmpHrs = 0;
