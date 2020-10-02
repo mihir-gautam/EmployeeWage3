@@ -4,12 +4,12 @@ using System.Text;
 
 namespace EmployeeWageProblem
 {
-    class EmpWageBuilderArray
+    class EmpWageBuilderArray : IComputeEmpWage 
     {
         public const int IS_PART_TIME = 1;
         public const int IS_FULL_TIME = 2;
-        private int numOfCompany = 0;
-        private CompanyEmpWage[] companyEmpWageArray;
+        public int numOfCompany = 0;
+        public CompanyEmpWage[] companyEmpWageArray;
 
         public EmpWageBuilderArray()
         {
@@ -24,11 +24,11 @@ namespace EmployeeWageProblem
         {
             for (int i=0;i<numOfCompany;i++)
             {
-                companyEmpWageArray[i].setTotalEmpWage(this.computeEmpWage(this.companyEmpWageArray[i]));
+                companyEmpWageArray[i].setTotalEmpWage(this.EmpWageCompute(this.companyEmpWageArray[i]));
                 Console.WriteLine(this.companyEmpWageArray[i].toString());
             }
         }
-        private int computeEmpWage(CompanyEmpWage companyEmpWage)
+        public int EmpWageCompute(CompanyEmpWage companyEmpWage)
         {
             int empHrs = 0;
             int totalEmpHrs = 0;
