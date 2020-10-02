@@ -6,8 +6,11 @@ namespace EmployeeWageProblem
     {
         static void Main(String[] args)
         {
-        ForMultipleCompanies.ComputeEmpWage("Microsoft", 20, 2, 10);
-        ForMultipleCompanies.ComputeEmpWage("Apple", 10, 4, 20);
+            Console.WriteLine("Welcome to Employee Wage Program");
+            EmpWageBuilderObject dmart = new EmpWageBuilderObject("D'Mart", 20, 6, 10);
+            dmart.ComputeEmpWage("D'Mart", 20, 6, 10);
+            EmpWageBuilderObject reliance = new EmpWageBuilderObject("Reliance", 10, 4, 20);
+            reliance.ComputeEmpWage("Reliance", 10, 4, 20);
         }
     }
 }
