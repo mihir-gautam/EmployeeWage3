@@ -5,36 +5,40 @@ using System.Text;
 
 namespace EmployeeWageProblem
 {
-    class EmpWageBuilderArray : IComputeEmpWage 
+    class EmpWageBuilder : IComputeEmpWage
     {
         public const int IS_PART_TIME = 1;
         public const int IS_FULL_TIME = 2;
-        public int numOfCompany = 0;
-        public ArrayList companyEmpWageList = new ArrayList();
+        private LinkedList<CompanyEmpWage> companyEmpWageList;
+        private Dictionary<string, CompanyEmpWage> companyToEmpWageMap;
+        public EmpWageBuilder()
+        {
+            this.companyEmpWageList = new LinkedList<CompanyEmpWage>();
+            this.companyToEmpWageMap = new Dictionary<string, CompanyEmpWage>();
+        }
 
         public void addCompanyEmpWage(string company, int empRatePerHour, int numOfWorkingDays, int maxHoursPerMonth)
         {
             CompanyEmpWage CEW = new CompanyEmpWage(company, empRatePerHour, numOfWorkingDays, maxHoursPerMonth);
-            companyEmpWageList.Insert(numOfCompany, CEW);
-            numOfCompany++;
+            this.companyEmpWageList.AddLast(CEW);
+            this.companyToEmpWageMap.Add(company, CEW);
         }
         public void computeEmpWage()
         {
-            for (int i = 0; i < numOfCompany; i++)
+            foreach (CompanyEmpWage companyEmpWage in this.companyEmpWageList)
             {
-                CompanyEmpWage comObj = (CompanyEmpWage)companyEmpWageList[i];
-                comObj.setTotalEmpWage(this.EmpWageCompute(comObj));
-                Console.WriteLine(comObj.toString());
+                companyEmpWage.setTotalEmpWage(this.EmpWageCompute(companyEmpWage));
+                Console.WriteLine(companyEmpWage.toString());
             }
         }
-        public int EmpWageCompute(CompanyEmpWage companyEmpWage)
+        public int EmpWageCompute(CompanyEmpWage companyEmployeeWage)
         {
             int empHrs = 0;
             int totalEmpHrs = 0;
             int totalWorkingDays = 0;
             int empRatePerHour = 20;
 
-            while (totalEmpHrs <= companyEmpWage.maxHoursPerMonth && totalWorkingDays < companyEmpWage.numOfWorkingDays)
+            while (totalEmpHrs <= companyEmployeeWage.maxHoursPerMonth && totalWorkingDays < companyEmployeeWage.numOfWorkingDays)
             {
                 totalWorkingDays++;
                 Random random = new Random();
@@ -52,9 +56,13 @@ namespace EmployeeWageProblem
                         break;
                 }
                 totalEmpHrs += empHrs;
-                Console.WriteLine("Days:" + totalWorkingDays + " Emp Hrs : " + totalEmpHrs + " Daily Wage : "+ empHrs * empRatePerHour);
+                Console.WriteLine("Days:" + totalWorkingDays + " Emp Hrs : " + totalEmpHrs + " Daily Wage : " + empHrs * empRatePerHour);
             }
-            return totalEmpHrs * companyEmpWage.empRatePerHour;
+            return totalEmpHrs * companyEmployeeWage.empRatePerHour;
+        }
+        public int getTotalWage(string company)
+        {
+            return this.companyToEmpWageMap[company].totalEmpWage;
         }
     }
 }
